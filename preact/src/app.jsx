@@ -1,32 +1,37 @@
 import { useState } from 'preact/hooks'
-import preactLogo from './assets/preact.svg'
 import './app.css'
+import '@picocss/pico'
 
 export function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://preactjs.com" target="_blank">
-          <img src={preactLogo} class="logo preact" alt="Preact logo" />
-        </a>
-      </div>
-      <h1>Vite + Preact</h1>
-      <div class="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/app.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p class="read-the-docs">
-        Click on the Vite and Preact logos to learn more
-      </p>
+        <header>
+        <nav>
+            <ul>
+                <li><strong>Brand</strong></li>
+            </ul>
+            <ul>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#" role="button">Button</a></li>
+            </ul>
+        </nav>
+        </header>
+
+        <main>
+            <h1>Hello, world!</h1>
+            <p>
+                This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+            </p>
+        </main>
+
+        <footer>
+            <p>
+                <a href="#">Link</a> | <a href="#">Link</a> | <a href="#">Link</a>
+            </p>
+        </footer>
     </>
   )
 }
