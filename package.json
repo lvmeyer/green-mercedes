@@ -11,11 +11,13 @@
 	},
 	"dependencies": {
 		"@picocss/pico": "^1.5.7",
-		"preact": "^10.11.3"
+		"preact": "^10.11.3",
+		"preact-router": "^4.1.0"
 	},
 	"devDependencies": {
 		"@preact/preset-vite": "^2.5.0",
 		"eslint": "^8.36.0",
+		"preact-async-route": "^2.2.1",
 		"vite": "^4.1.0"
 	}
 }
