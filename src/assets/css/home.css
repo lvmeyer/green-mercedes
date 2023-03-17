@@ -1,0 +1,24 @@
+.design {
+    display: flex;
+    padding: 0.5em;
+
+}
+
+.img{
+    max-width:66%;
+    object-fit: scale-down;
+    padding: 0.5em;
+}
+
+.img2{
+    max-width:100%;
+    object-fit: scale-down;
+    padding: 0.5em;
+}
+
+.design-car{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0.5em;
+}
