@@ -13,6 +13,11 @@ export function App() {
 				getComponent={() => import('./pages/Product.jsx').then(module => module.default)}
 				loading={() => <div>Loading...</div>}
 			/>
+			<AsyncRoute
+				path="/products"
+				getComponent={() => import('./pages/Products.jsx').then(module => module.default)}
+				loading={() => <div>Loading...</div>}
+			/>
 		</Router>
 	);
 }

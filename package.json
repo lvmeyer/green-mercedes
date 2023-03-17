@@ -11,6 +11,7 @@
 	},
 	"dependencies": {
 		"@picocss/pico": "^1.5.7",
+		"pocketbase": "^0.12.1",
 		"preact": "^10.11.3",
 		"preact-router": "^4.1.0"
 	},
