@@ -18,7 +18,43 @@
 
 .design-car{
     display: flex;
-    width: 100%;
+    max-width: 100%;
     flex-direction: column;
+    padding: 0.5em;
+}
+
+.design-car-img{
+    display: flex;
+    max-width: 75%;
+}
+
+.design-car2{
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    padding: 0.5em;
+}
+
+.description-card{
+    font: initial;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+
+.description{
+    font: initial;
+    padding-top: 1em;
+}
+
+.desc-tab{
+    font: initial;
+    text-align: center;
+    font-size: large;
+}
+
+
+.img-tab{
+    max-width: 100%;
+    object-fit: scale-down;
     padding: 0.5em;
 }
