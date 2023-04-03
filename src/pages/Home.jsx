@@ -6,13 +6,12 @@ import voiturehome from '../assets/cars/voiturehome.avif';
 import voitureblanche from '../assets/cars/voitureblanche.avif';
 import arrierevoiture from '../assets/cars/arrierevoiture.avif';
 import interieurvoiture from '../assets/cars/interieurvoiture.avif';
-import coffre from '../assets/cars/coffre.avif';
+import coffre from '../assets/cars/coffre_650.avif';
 import interieurvoiture2 from '../assets/cars/interieurvoiture2.avif';
 import portiere from '../assets/cars/portiere.avif';
 import roue from '../assets/cars/roue.avif';
 
 import '../assets/css/home.css';
-
 
 
 
@@ -22,7 +21,7 @@ const Home = () => {
             <div className="home">
                 <div className="content">
                     <img src={voitureblanche} class="img-home"/>
-                    <Image src={coffre} alt="voiture blanche" />
+                    <Image src={coffre} alt="gngngnng blanche" />
                     <div className="text-top-left">L'aube d'une nouvelle ère à la sensualité époustouflante.</div>
                 </div>
                 <p className="description"> Pour les trajets courts, privilégiez la marche ou le vélo. Au quotidien, prenez les transports en commun. Pensez à covoiturer. <br />#SeDéplacerMoinsPolluer
@@ -36,7 +35,7 @@ const Home = () => {
                         <img src={interieurvoiture} class="img2" loading="lazy"/>
                         <img src={arrierevoiture} class="img2" loading="lazy"/>
                     </div>
-                </div>              
+                </div>
                 <img src={voiturehome} />
                 <table>
                     <td></td>
