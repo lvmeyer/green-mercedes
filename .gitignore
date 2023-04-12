@@ -26,3 +26,5 @@ dist-ssr
 .node_repl_history
 .ash_history
 .npm
+
+.env

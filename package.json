@@ -11,8 +11,13 @@
 	},
 	"dependencies": {
 		"@picocss/pico": "^1.5.7",
+		"lucide-preact": "^0.140.0",
+		"pocketbase": "^0.12.1",
 		"preact": "^10.11.3",
-		"preact-router": "^4.1.0"
+		"preact-hooks": "^0.0.0",
+		"preact-lazy": "^0.0.3",
+		"preact-router": "^4.1.0",
+		"react-lazy-load-image-component": "^1.5.6"
 	},
 	"devDependencies": {
 		"@preact/preset-vite": "^2.5.0",

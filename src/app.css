@@ -1,3 +1,10 @@
 .min-vh-screen {
   min-height: 100vh;
 }
+.small {
+  font-size: 0.7em;
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: 0;
+  opacity: 25%;
+}
