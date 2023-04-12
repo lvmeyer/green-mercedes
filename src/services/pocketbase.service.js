@@ -8,6 +8,10 @@ class PocketbaseService {
     get pocketbase() {
         return this._pocketbase;
     }
+
+    getPictureUrl = (record, picture, options = {}) => {
+        return `${import.meta.env.VITE_POCKETBASE_URL}/api/files/${record.collectionId}/${record.id}/${picture}?${new URLSearchParams(options)}`;
+    }
 }
 
 export default new PocketbaseService();

@@ -7,7 +7,6 @@ const Products = () => {
 
 
     useEffect(async () => {
-        console.log("useEffect");
         const data = await CarsService.getCars();
         setProducts(data);
         setLoading(false);
