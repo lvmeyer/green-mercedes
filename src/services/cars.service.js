@@ -11,6 +11,12 @@ class CarsService {
         return await this.collection.getFullList();
     }
 
+    async getCarsByCategory(category) {
+        return await this.collection.getFullList({
+            filter: `category = "${category}"`,
+        })
+    }
+
     async getCar(id) {
         return await this.collection.getElementById(id);
     }

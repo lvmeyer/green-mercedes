@@ -82,4 +82,12 @@
     height: 100%;
 }
 
+.home-products {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    gap: 30px;
+}
+
 
