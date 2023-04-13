@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+    node:
+        image: node:19.0.0-alpine
+        user: node
+        stdin_open: true
+        tty: true
+        working_dir: /home/node
+        env_file:
+            -   .env
+        entrypoint: /bin/sh -c "npm install && npm run build"
+        ports:
+            - ${VITE_APP_PORT}:3000
+        volumes:
+            - .:/home/node
+
+    pocket-base:
+        image: augustodelg/pocketbase:latest
+        restart: unless-stopped
+        ports:
+            - ${VITE_POCKETBASE_PORT}:${VITE_POCKETBASE_PORT}
+        volumes:
+            - pocket-base-data:/pb_data
+volumes:
+    pocket-base-data:
