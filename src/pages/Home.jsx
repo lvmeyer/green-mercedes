@@ -1,5 +1,4 @@
 import Layout from "../components/Layout.jsx";
-import intro_video from '../assets/videos/home/intro.mp4'
 import {lazy, Suspense} from "preact/compat";
 import '../assets/css/home.css';
 import {Car, CarIcon, Mail, NewspaperIcon} from "lucide-preact";
@@ -26,7 +25,7 @@ const Home = ({ scrollTo }) => {
                         preload="none"
                         playsInline
                     >
-                        <source src={intro_video} type="video/mp4" />
+                        <source src="https://green-mercedes.b-cdn.net/intro_video.webm" type="video/webm" />
                     </video>
                     <figcaption className="home-figcaption">
                         <h1>Mercedes-Benz</h1>
