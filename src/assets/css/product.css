@@ -1,86 +1,14 @@
-.product{
-    margin:0
-}
-
-.design {
-    display: flex;
-    padding: 0.5em;
-
-}
-
-.img{
-    max-width:66%;
-    object-fit: scale-down;
-    padding: 0.5em;
-}
-
-.img2{
-    max-width:100%;
-    object-fit: scale-down;
-    padding: 0.5em;
-}
-
-.design-car{
-    display: flex;
-    max-width: 100%;
-    flex-direction: column;
-    padding: 0.5em;
-}
-
-.design-car-img{
-    display: flex;
-    max-width: 75%;
-}
-
-.design-car2{
-    display: flex;
-    max-width: 100%;
-    flex-direction: column;
-    padding: 0.5em;
-}
-
-.description-card{
-    padding-top: 1em;
-    padding-left: 1em;
-}
-
-.description{
-    font: initial;
-    padding-top: 1em;
-}
-
-.desc-tab{
-    font: initial;
-    text-align: center;
-    font-size: large;
-}
-
-
-.img-tab{
-    max-width: 100%;
-    object-fit: scale-down;
-    padding: 0.5em;
-}
-
-.content {
-    position: relative;
-    text-align: center;
-}
-
-.text-top-left {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    color: #606060e8;
-    text-shadow: 2px 2px 5px #000000;
-    font: cursive;
-    font-size: large;
-}
-
 .img-product{
     object-fit: cover;
     max-width: 100%;
     height: 100%;
+}
+
+.group-title{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
 }
 
 @media screen and (max-width: 452px) {

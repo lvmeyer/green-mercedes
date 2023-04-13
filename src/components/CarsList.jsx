@@ -43,6 +43,7 @@ const CarsList = () => {
                                     PocketbaseService.getPictureUrl(record, record.picture, { thumb: "800x0" }),
                                     PocketbaseService.getPictureUrl(record, record.picture, { thumb: "100x0" }),
                                 ]}
+                                className="home-cars-grid-item-image"
                             />
                             <div className="home-cars-grid-item-container">
                                 <h4>{record.name}</h4>

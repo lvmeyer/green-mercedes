@@ -1,14 +1,30 @@
 import Layout from "../components/Layout.jsx";
 import Image from "../components/Image.jsx";
-import '../assets/css/product.css';
 import CarsService from "../services/cars.service.js";
 import {useEffect, useState} from "preact/hooks";
 import PocketbaseService from "../services/pocketbase.service.js";
+import {Cog, LucideShoppingCart} from "lucide-preact";
+import {render} from "preact";
+import '../assets/css/product.css';
 
 
 
 const Product = ({ id }) => {
     const [car, setCar] = useState(null);
+
+    const createModal = () => {
+        //Create a NewsDialog modal component with the record
+        import("../components/MeetingDialog.jsx").then(({default: MeetingDialog}) => {
+            const modal = document.createElement("div");
+            document.body.appendChild(modal);
+            const close = () => {
+                modal.remove();
+            };
+            console.log("open")
+            const dialog = <MeetingDialog open={true} onClose={close} carId={car.id} />;
+            render(dialog, modal);
+        });
+    }
 
     useEffect(async () => {
         const data = await CarsService.getCar(id);
@@ -64,7 +80,10 @@ const Product = ({ id }) => {
             <section className="container" id="caracteristiques">
                 <div className="grid">
                     <article>
-                        <h3>Caractéristiques</h3>
+                        <h3 className="group-title">
+                            <Cog size={38} />
+                            Caractéristiques
+                        </h3>
                         <ul>
                             <li>Type : <strong>{car.categoryName}</strong></li>
                             <li>Année : <strong>{car.year}</strong></li>
@@ -76,6 +95,27 @@ const Product = ({ id }) => {
                             <li>Nombre de chevaux : {car.horsepower} ch</li>
                             <li>Nombre de kilomètres : {car.kilometers} km</li>
                         </ul>
+                    </article>
+
+                    <article>
+                        <hgroup>
+                            <h3 className="group-title">
+                                <LucideShoppingCart size={38} />
+                                Achat
+                            </h3>
+                            <h4>{car.price} €</h4>
+                        </hgroup>
+                        <p>
+                            Vous souhaitez acheter cette voiture ? Contactez-nous au 01 23 45 67 89 ou par mail à <a href="mailto:mercedes-benz.fr">mercedes-benz.fr</a>.
+                        </p>
+                        <p>
+                            Vous pouvez également nous rendre visite au 1 rue de la Mercedes, 75001 Paris.
+                            Ouvert du lundi au vendredi de 9h à 18h.
+                        </p>
+                        <p>
+                            Ou bien encore, vous pouvez nous contacter via notre formulaire de contact.
+                        </p>
+                        <button onClick={createModal}>Prendre rendez-vous</button>
                     </article>
                 </div>
             </section>
