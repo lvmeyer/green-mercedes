@@ -4,27 +4,22 @@ import '@picocss/pico';
 import './app.css';
 
 import Home from "./pages/Home.jsx";
+import RouteLoader from "./components/RouteLoader.jsx";
 export function App() {
-
 	return (
 		<Router>
 			<Home path="/" />
 			<Home path="/products" scrollTo="products" />
 			<Home path="/news" scrollTo="news" />
 			<AsyncRoute
-				path="/product"
+				path="/products/:id"
 				getComponent={() => import('./pages/Product.jsx').then(module => module.default)}
-				loading={() => <div>Loading...</div>}
-			/>
-			<AsyncRoute
-				path="/products"
-				getComponent={() => import('./pages/Products.jsx').then(module => module.default)}
-				loading={() => <div>Loading...</div>}
+				loading={() => <RouteLoader />}
 			/>
 			<AsyncRoute
 				path="/legal/copyright"
 				getComponent={() => import('./pages/Copyright.jsx').then(module => module.default)}
-				loading={() => <div>Loading...</div>}
+				loading={() => <RouteLoader />}
 			/>
 		</Router>
 	);

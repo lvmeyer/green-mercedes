@@ -3,7 +3,7 @@ import "../assets/css/navbar.css";
 const Navbar = () => {
     return (
         <>
-            <header>
+            <header className="nav">
                 <nav className="container-fluid">
                     <ul>
                         <li className="nav-title-container">
