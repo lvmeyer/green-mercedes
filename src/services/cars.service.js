@@ -29,7 +29,7 @@ class CarsService {
     }
 
     async getCar(id) {
-        return await this.collection.getElementById(id);
+        return await this.collection.getOne(id)
     }
 
     async addCar(car) {

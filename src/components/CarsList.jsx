@@ -35,7 +35,7 @@ const CarsList = () => {
             <div style={{ width: "75%" }} className="home-cars-flex-container">
                 <div className="home-cars-grid">
                     {cars.items !== undefined && cars.items.map((record) => (
-                        <div className="home-cars-grid-item">
+                        <div className="home-cars-grid-item" onClick={() => window.location.href = `/products/${record.id}`}>
                             <Image
                                 src={PocketbaseService.getPictureUrl(record, record.picture, { thumb: "1000x0" })}
                                 alt={record.name}

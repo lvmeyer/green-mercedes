@@ -51,7 +51,19 @@ const Home = ({ scrollTo }) => {
                 </Suspense>
             </section>
 
-            <section aria-label="Subscribe example">
+            <section className="container" id="annotations">
+                <details>
+                    <summary>
+                        Mentions légales et annotations
+                    </summary>
+                    <p>
+                        [a] Prix conseillé constructeur. Prix client TTC clé en main conseillé pour le véhicule au tarif en vigueur à la date de consultation.
+                        Selon les pays, les versions commercialisées de nos véhicules peuvent différer, certains équipements peuvent ne pas être disponibles (en série, en option ou en accessoire). Veuillez-vous rapprocher de votre Distributeur Agréé pour plus de précisions.
+                    </p>
+                </details>
+            </section>
+
+            <section aria-label="NewsLetter">
                 <div className="container">
                     <article>
                         <hgroup>
