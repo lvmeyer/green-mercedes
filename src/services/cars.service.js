@@ -11,6 +11,23 @@ class CarsService {
         return await this.collection.getFullList();
     }
 
+    async getCarsPaginated(page, pageSize) {
+        return await this.collection.getList(page, pageSize)
+    }
+
+    async getCarsByCategoryPaginated(category, page, pageSize) {
+        if (!category || category === 'all') return await this.collection.getList(page, pageSize);
+        return await this.collection.getList(page, pageSize,{
+            filter: `category = "${category}"`,
+        })
+    }
+
+    async getCarsByCategory(category) {
+        return await this.collection.getFullList({
+            filter: `category = "${category}"`,
+        })
+    }
+
     async getCar(id) {
         return await this.collection.getElementById(id);
     }

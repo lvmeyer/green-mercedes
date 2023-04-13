@@ -184,20 +184,20 @@ const Navbar = () => {
                         </li>
                     </ul>
                     <ul>
-                        <li>
+                        <li className="nav-link">
                             <Link href="/">
                                 Accueil
                             </Link>
                         </li>
-                        <li>
-                            <a href="#news">
+                        <li className="nav-link">
+                            <Link href="/news">
                                 Actualités
-                            </a>
+                            </Link>
                         </li>
-                        <li>
-                            <a href="#products">
-                                Nos modèles
-                            </a>
+                        <li className="nav-link">
+                            <Link href="/products">
+                                Modèles
+                            </Link>
                         </li>
                     </ul>
                 </nav>

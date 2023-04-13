@@ -1,5 +1,6 @@
 import {useEffect, useState} from "preact/hooks";
 import CarsService from "../services/cars.service.js";
+import Layout from "../components/Layout.jsx";
 
 const Products = () => {
     const [products, setProducts] = useState([]);
@@ -12,7 +13,7 @@ const Products = () => {
         setLoading(false);
     }, []);
 
-    return (
+    return (<Layout>
         <div>
         <h1>Products</h1>
         {loading ? (
@@ -25,6 +26,7 @@ const Products = () => {
             </ul>
         )}
         </div>
+        </Layout>
     );
 }
 
